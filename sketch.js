@@ -13,12 +13,10 @@ function setup() {
   weight = random(30,52);
   bullet.velocityX = speed;
 }
-
+/* Mam i used isTouching function that we made in class and so with this much speed of bullet it sometimes don't record touching.
+i could have used is touching function of p5 library and that is more effective but for this project we need to apply what we study in class.*/
 function draw() {
   background("black");  
-
-
-  
   var deformation = 0.5*speed*speed*weight/(width*width*width);
   if(isTouching(wall,bullet)){
   if(deformation>10){
