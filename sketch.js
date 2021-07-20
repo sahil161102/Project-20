@@ -16,7 +16,7 @@ function setup() {
 function draw() {
   background("black");  
   var deformation = 0.5*speed*speed*weight/(width*width*width);
-  if(hasCollided(wall,bullet)){
+  if(hasCollided(bullet,wall)){
   if(deformation>10){
     bullet.shapeColor="Red";
   }
